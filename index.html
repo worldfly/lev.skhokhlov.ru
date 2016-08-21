@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>LEV!</title>
-    <link href="_/photoswipe.css" rel="stylesheet"/>
-    <link href="_/default-skin/default-skin.css" rel="stylesheet"/>
+    <link href="files/photoswipe.css" rel="stylesheet"/>
+    <link href="files/default-skin/default-skin.css" rel="stylesheet"/>
     <style>
         .page {
             font-weight: 400;
@@ -55,14 +55,14 @@
 <div class="page__content">
     <h1 class="logo"><span class="logo__text">LEV!</span></h1>
     <div class=""><p>Hello, I'm photographer. I take photos of city, people and events. You can find me at <a href="mailto:lev.a@me.com">lev.a@me.com</a>.</p></div>
-
+<!-- TODO: Добавить подписи -->
     <div class="my-gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
             <a href="https://c2.staticflickr.com/2/1459/26128642014_f79eba241c_b.jpg" itemprop="contentUrl" data-size="1024x678">
                 <img src="https://c2.staticflickr.com/2/1459/26128642014_f79eba241c_b.jpg" itemprop="thumbnail" alt="Image description" />
             </a>
-
+            <figcaption >sd</figcaption>
         </figure>
 
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
@@ -102,8 +102,8 @@
     ga('create', 'UA-50638713-3', 'auto');
     ga('send', 'pageview');
 </script>
-<script src="_/photoswipe.min.js"></script>
-<script src="_/photoswipe-ui-default.min.js"></script>
+<script src="files/photoswipe.min.js"></script>
+<script src="files/photoswipe-ui-default.min.js"></script>
 <script>
 
     var initPhotoSwipeFromDOM = function(gallerySelector) {
@@ -370,9 +370,9 @@
             <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
             </button>
 
-            <!--<div class="pswp__caption">-->
-                <!--<div class="pswp__caption__center"></div>-->
-            <!--</div>-->
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
 
         </div>
 
