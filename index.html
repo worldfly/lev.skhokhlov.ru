@@ -13,6 +13,7 @@
             background-size: cover;
             background-repeat: no-repeat;
             height: 100vh;
+            transition: .4s;
         }
 
         .page__content {
@@ -100,5 +101,16 @@
 </a><a class="social__link" href="mailto:lev.a@me.com">
     <div class="social__icon social__icon_email"></div>
 </a></div>
+<script>
+    var images = [
+        'https://app.box.com/representation/file_version_120115383362/image_2048_jpg/1.jpg?shared_name=d38c9wno8oo8o83xyvt4d664qno0p9g9',
+        'https://app.box.com/representation/file_version_120115385907/image_2048_jpg/1.jpg?shared_name=d38c9wno8oo8o83xyvt4d664qno0p9g9'
+    ];
+    var page = document.getElementsByClassName('page')[0];
+
+    setInterval(function(){
+        page.style.backgroundImage = 'url(' + images[(Math.random() * (images.length-1)).toFixed(0)] + ')';
+    }, 1000);
+</script>
 </body>
 </html>
