@@ -12,7 +12,7 @@
             color: #222;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 100%;
+            height: 100vh;
         }
 
         .page__content {
@@ -36,23 +36,69 @@
 
         .social {
             position: absolute;
-            bottom: 5%;
+            bottom: 3%;
             width: 100%;
+            text-align: center;
         }
 
-        .social__instagram {
-            background: url(img/Instagram-v051916.png) no-repeat;
-            background-size: 100%;
+        .social__icon {
             width: 30px;
             height: 30px;
             margin: 0 auto;
         }
+
+        .social__icon_instagram {
+            background: url(img/instagram.png) no-repeat;
+            background-size: 100%;
+        }
+
+        .social__icon_vk {
+            background: url(img/vk.png) no-repeat;
+            background-size: 100%;
+        }
+
+        .social__icon_email {
+            background: url(img/email.png) no-repeat;
+            background-size: 100%;
+        }
+
+        .social__link {
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .button {
+            text-align: center;
+            position: absolute;
+            margin: 0 auto;
+            top: 50%;
+            width:100%;
+        }
+
+        .button__link {
+            color: #fcfcfc;
+            text-shadow: 0 3px 6px rgba(0, 0, 36, .18);
+            text-decoration: none;
+            font-size: 28px;
+            padding: .24em .8em;
+            border: 3px solid #fff;
+        }
     </style>
 </head>
-<body class="page" style="background-image: url('https://app.box.com/representation/file_version_120115383362/image_2048_jpg/1.jpg?shared_name=d38c9wno8oo8o83xyvt4d664qno0p9g9')">
+<body class="page"
+      style="background-image: url('https://app.box.com/representation/file_version_120115383362/image_2048_jpg/1.jpg?shared_name=d38c9wno8oo8o83xyvt4d664qno0p9g9')">
 <div class="logo">
     <span class="logo__text">iPuf</span>
 </div>
-<div class="social"><a href="https://instagram.com/ipuf"><div  class="social__instagram"></div></a> </div>
+<div class="button">
+        <a class="button__link" href="https://skhokhlov.ru">Everything</a>
+</div>
+<div class="social"><a class="social__link" href="https://instagram.com/ipuf">
+    <div class="social__icon social__icon_instagram"></div>
+</a><a class="social__link" href="https://vk.com/ipufff">
+    <div class="social__icon social__icon_vk"></div>
+</a><a class="social__link" href="mailto:lev.a@me.com">
+    <div class="social__icon social__icon_email"></div>
+</a></div>
 </body>
 </html>
