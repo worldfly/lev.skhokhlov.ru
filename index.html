@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>LEV!</title>
     <style>
         .page {
@@ -14,6 +15,7 @@
             background-repeat: no-repeat;
             height: 100vh;
             transition: .4s;
+            background-position: center;
         }
 
         .page__content {
@@ -83,11 +85,14 @@
             font-size: 28px;
             padding: .24em .8em;
             border: 3px solid #fff;
+            -webkit-border-radius:;
+            -moz-border-radius:;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body class="page"
-      style="background-image: url('https://app.box.com/representation/file_version_120115383362/image_2048_jpg/1.jpg?shared_name=d38c9wno8oo8o83xyvt4d664qno0p9g9')">
+      style="background-image: url('img/DSC_0516.jpg')">
 <div class="logo">
     <span class="logo__text">iPuf</span>
 </div>
@@ -103,14 +108,24 @@
 </a></div>
 <script>
     var images = [
-        'https://app.box.com/representation/file_version_120115383362/image_2048_jpg/1.jpg?shared_name=d38c9wno8oo8o83xyvt4d664qno0p9g9',
-        'https://app.box.com/representation/file_version_120115385907/image_2048_jpg/1.jpg?shared_name=d38c9wno8oo8o83xyvt4d664qno0p9g9'
+        'img/DSC_0516.jpg',
+        'img/DSC_0538.jpg',
+        'img/DSC_0573.jpg',
+        'img/DSC_1646.jpg'
     ];
     var page = document.getElementsByClassName('page')[0];
 
+    var l = images.length;
+    while(--l){
+        var link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = images[l];
+        document.head.appendChild(link);
+    }
+
     setInterval(function(){
-        page.style.backgroundImage = 'url(' + images[(Math.random() * (images.length-1)).toFixed(0)] + ')';
-    }, 1000);
+        page.style.backgroundImage = 'url(' + images[Math.round(Math.random() * (images.length-1))] + ')';
+    }, 3000);
 </script>
 </body>
 </html>
