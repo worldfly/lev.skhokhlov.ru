@@ -117,10 +117,10 @@
 
     var l = images.length;
     while(--l){
-        var link = document.createElement('link');
-        link.rel = 'preload';
-        link.href = images[l];
-        document.head.appendChild(link);
+        var link = document.createElement('img');
+        link.src = images[l];
+        link.style.display = 'none';
+        document.body.appendChild(link);
     }
 
     setInterval(function(){
